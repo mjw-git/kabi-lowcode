@@ -1,0 +1,78 @@
+body,html{
+    margin: 0;
+    padding:0;
+}
+.box-height{
+    height:calc(100vh - 64px) ;
+}
+.hover{
+    cursor: pointer;
+}
+.circle-shape{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    border: 1px solid skyblue;
+    background-color: #fff;
+    // z-index: 999;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.color-grey{
+    background-color: #e2e2e2;
+}
+ul{
+    width: 60px;
+    padding: 0;
+    margin: 0;
+}
+.menu-item{
+    transition: all .5s;
+    display: block;
+    width: 60px;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    // border: 1px solid red;
+    background-color: #f1edef;
+    text-align: center;
+    // border: 1px solid red;
+    list-style: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+.menu-item:hover{
+    cursor: pointer;
+    background-color: gray;
+}
+.border-line{
+    border: 1px solid skyblue;
+}
+.circle-shape:nth-child(2){
+    cursor: nw-resize;
+}
+.circle-shape:nth-child(3){
+    cursor: n-resize;
+}
+.circle-shape:nth-child(4){
+    cursor: ne-resize;
+}
+.circle-shape:nth-child(5){
+    cursor: w-resize;
+}
+.circle-shape:nth-child(6){
+    cursor: sw-resize;
+}
+.circle-shape:nth-child(7){
+    cursor: s-resize;
+}
+.circle-shape:nth-child(8){
+    cursor: se-resize;
+}
+.circle-shape:nth-child(9){
+    cursor: e-resize;
+}
