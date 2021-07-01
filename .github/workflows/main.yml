@@ -14,8 +14,8 @@ jobs:
       uses: actions/checkout@master # 将代码拷贝到虚机中
     - name: install&build
       run: |
-          npm install
-          npm run build 
+          yarn install
+          yarn build
     - name: buildAndDeploy
       uses: JamesIves/github-pages-deploy-action@releases/v4
       with:
