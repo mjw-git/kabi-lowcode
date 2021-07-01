@@ -30,7 +30,13 @@ export default defineComponent({
                 }}
                 class="color-grey flex"
               >
-                <img width="30" height="30" src={item.icon} alt="" />
+                <img
+                  width="30"
+                  draggable="false"
+                  height="30"
+                  src={item.icon}
+                  alt=""
+                />
                 {item.name}
               </div>
             </div>
