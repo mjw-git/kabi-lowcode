@@ -1,0 +1,25 @@
+name: buildAndDeploy
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # 我们选择使用最新的ubuntu系统
+    steps:
+    - name: checkout
+      uses: actions/checkout@master # 将代码拷贝到虚机中
+    - name: install&build
+      run: |
+          yarn install
+          yarn build
+    - name: buildAndDeploy
+      uses: JamesIves/github-pages-deploy-action@releases/v4
+      with:
+          branch: git-pages # The branch the action should deploy to.
+          folder: dist # The folder the action should deploy.
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # 使用刚新建的secret
